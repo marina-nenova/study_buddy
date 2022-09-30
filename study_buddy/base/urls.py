@@ -1,7 +1,7 @@
 from django.urls import path
 
 from study_buddy.base.views import login_page, home, room, create_room, update_room, delete_room, logout_view, \
-    register_user, delete_message, user_profile, update_user
+    register_user, delete_message, user_profile, update_user, topics_page, activities_page
 
 urlpatterns = (
     path('login/', login_page, name="login"),
@@ -18,4 +18,6 @@ urlpatterns = (
     path("delete_message/<str:pk>/", delete_message, name="delete-message"),
 
     path("update_user/", update_user, name="update-user"),
+    path("topics/", topics_page, name="topics_page"),
+    path("activities/", activities_page, name="activities_page"),
 )
