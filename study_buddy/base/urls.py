@@ -1,11 +1,11 @@
 from django.urls import path
 
 from study_buddy.base.views import login_page, home, room, create_room, update_room, delete_room, logout_view, \
-    register_user, delete_message, user_profile, update_user, topics_page, activities_page
+    register_page, delete_message, user_profile, update_user, topics_page, activities_page
 
 urlpatterns = (
     path('login/', login_page, name="login"),
-    path('register/', register_user, name="register"),
+    path('register/', register_page, name="register"),
     path('logout/', logout_view, name="logout"),
 
     path("", home, name="home"),
